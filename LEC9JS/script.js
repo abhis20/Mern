@@ -88,18 +88,26 @@ N = 10;
 let M = 10;
 
 // write a program to print 10 '*'
-let starString = "";
-for(let i = 0; i < N; i++)
-  starString += "*";
-console.log(starString);
+
+console.log("write a program to print 10 '*'");
+let star="";
+for(let i=1;i<=N;i++){
+    star+="* ";
+}
+console.log(star);
+
 
 //write a program to print 10 lines of (10 '*' in one line)
-for(let i = 0; i < M; i++){
-  let starString = "";
-  for(let j = 0; j < N; j++)
-    starString += "*";
-  console.log(starString);
+
+console.log("write a program to print 10 lines of *");
+for(let i=1;i<=N;i++){
+    let star="";
+for(let j=1;j<=M;j++){
+    star+="* ";
 }
+console.log(star);
+}
+
 
 /* 
 Print below pattern
@@ -112,31 +120,24 @@ Print below pattern
 1 2 3 4 5 6
 */
 
-
-//STEP - 1: program to print 1 2 3 4 5 6
-N=6;
-
-let numString = "";
-for(let i = 0; i < N; i++) {
-  numString += i+1+ " ";
+console.log("Print below pattern");
+for(let j=1;j<=6;j++){
+    let p="";
+for(let i=0;i<6;i++){
+    p+=i+1+" ";
 }
-console.log(numString);
+console.log(p);
+}
+
+
 
 /* Bonus question, guess the output
+
 const val = 1 + 3 + " ";
 console.log({val}); 
+====>  4(space)
+
 */
-
-// STEP 2: write a for loop that runs 6 times and add STEP 1 inside this loop
-M=6;
-
-for(let i = 0; i < M; i++){
-  let numString = "";
-  for(let j = 0; j < N; j++) {
-    numString += j+1+ " ";
-  }
-  console.log(numString);
-}
 
 /* H.W.
 Print this pattern:
@@ -147,8 +148,19 @@ A.
 ***
 **
 *
+*/
+
+console.log("print pattern");
+ for(let i=1;i<=5;i++){
+     let str="";
+     for(let j=1;j<=(5-i)+1;j++){
+        str+="* ";
+     }
+     console.log(str);
+ }
 
 
+/*
 B. 
 1
 1 2 
@@ -157,6 +169,15 @@ B.
 1 2 3 4 5 
 1 2 3 4 5 6
 */
+
+console.log("print following pattern");
+for(let i=1;i<=6;i++){
+    let x="";
+    for(let j=1;j<=i;j++){
+        x+=j+" ";
+    }
+    console.log(x);
+}
 
 
 /* ============== do-while loop ============== 
@@ -188,4 +209,5 @@ while (response == "Yes" || response == "yes"){
     response = prompt("Do you want to continue? Count:" + responseCounter);
     console.log({response});
     responseCounter++;
-} */
+} 
+*/
