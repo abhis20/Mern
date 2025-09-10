@@ -107,6 +107,11 @@ console.log({ m1, m2, m3 });
 /* HW: Write a function to print the Minimum of two numbers 
 (try this question using all four methods discussed above) */
 
+function min(a,b){
+    return a<b?a:b;
+}
+console.log(min(12,10));
+
 /* giving default values to parameters (params) */
 
 /* 
