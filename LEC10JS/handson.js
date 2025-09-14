@@ -372,5 +372,58 @@ while(true){
 }
 }
 
+/*
 
 
+Problem Statement
+Given an integer n, print a hollow diamond pattern of stars with 2n - 1 total rows. The pattern should have stars (*) only on the boundary of the diamond and spaces inside.
+
+Input
+A single integer n (1 ≤ n ≤ 50) representing the number of rows in the upper half of the diamond (including the middle row).
+
+Output
+Print the hollow diamond pattern made of 2n - 1 rows.
+
+Example
+Input: 4
+
+Output:
+
+   *
+  * *
+ *   *
+*     *
+ *   *
+  * *
+   *
+
+
+*/
+n=8;
+ for(let i=1;i<=n;i++){
+    let str="";
+    for(let j=1;j<=n-i;j++){
+      str=str+" ";
+    }
+    for(let k=1;k<=2*i-1;k++){
+        if(k==1 || k==2*i-1)
+        str=str+"*";
+        else
+            str=str+" ";
+    }
+    console.log(str);
+  }
+
+ for(let i=n-1;i>=1;i--){
+    let str="";
+    for(let j=1;j<=n-i;j++){
+      str=str+" ";
+    }
+    for(let k=1;k<=2*i-1;k++){
+        if(k==1 || k==2*i-1)
+        str=str+"*";
+        else
+            str=str+" ";
+    }
+    console.log(str);
+  }
