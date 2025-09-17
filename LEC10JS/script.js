@@ -105,6 +105,7 @@ console.log({emptyBlockVariable});// Gives: undeclaredVariable is not defined
 }
 
 console.log({varVariable});
+
 var varVariable = "6";
 
 
