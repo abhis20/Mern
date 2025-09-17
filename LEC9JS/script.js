@@ -12,6 +12,7 @@ console.log("The factorial of given number is:",fact);
 let num=15;
 let count=0;
 for(let i=1;i<=num;i++){
+    
     if(num%i==0){
         count++;
     }
