@@ -12,6 +12,7 @@ const name7 = "Name7";
 const name8 = "Name8";
 const name9 = "Name9";
 const name10 = "Name10";
+const name11="Name11";
 
 const names = [
   "Name1",
