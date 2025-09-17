@@ -14,6 +14,7 @@ DRY Principle - Don't repeat yourself
 /* function naming rules is same as variable naming rules */
 function greetUser() {
   console.log("Hello World");
+  
 }
 
 /* Calling or Invoking a function */
