@@ -160,3 +160,44 @@ object2.a.b.c=12;
 console.log(object2);
 console.log(object1);
 
+/* 
+When exactly to use spread operators in objects? 
+-----> when we need to copy one level only 
+*/
+
+/* Conclusion for using spread operator with objects: for one level it's deep copy, 
+for other nested levels, it's shallow copy */
+
+// another way of copying object(shallow copy)
+
+let student={
+      name: "Pratik Patil",
+  age: 15,
+  standard: "10th",
+  gender: "male",
+  address: "Viman Nagar, Pune",
+  section: "C",
+};
+
+let studentCopy=Object.assign({},student);
+console.log({studentCopy});
+
+// deep copy
+
+object1={
+    a:
+    {
+        b:
+        {
+            c:3
+        }
+    }
+}
+let deepCopy=JSON.parse(JSON.stringify(object1));
+console.log({deepCopy});
+deepCopy.a.b.c=12;
+console.log({object1});
+
+//  JSON.stringify(object1) -------> converts the object to string
+
+// JSON.parse()   ------> converts the string to object
