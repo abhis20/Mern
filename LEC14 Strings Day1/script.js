@@ -156,4 +156,4 @@ console.log("stringMethodsring".indexOf("ring", 7));
 console.log("AbCd".toLowerCase());
 
 // toUpperCase()
-console.log("AbCd".toUpperCase());
+console.log("AbCd".toUppese());rCa
