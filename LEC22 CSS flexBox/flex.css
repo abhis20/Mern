@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+    gap: 10px;
+}
+header{
+    background-color: red;
+}
+.middle{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    gap: 10px;
+}
+.sidebar{
+    width: 200px;
+    background-color: yellow;
+}
+.content{
+    flex: 1;
+    background-color:blue ;
+}
+footer{
+    background-color: blueviolet;
+}

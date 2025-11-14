@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Form</h1>
+    <form novalidate >
+       <div>
+         <label for="name">Name</label>
+        <input 
+          name="name"
+          required 
+          autocomplete="name"
+          id="name" 
+          type="text" 
+          placeholder="Enter ur full name">
+       </div>
+       <div>
+        <label for="email">Email</label>
+        <input 
+          name="email"
+          required 
+          autocomplete="email"
+          id="email" 
+          type="email" 
+          placeholder="Enter ur Email">
+        </div>
+        <div>
+        
+        <label for="Phone">Phone Number</label>
+        <input 
+          name="phone"
+          required 
+          autocomplete="cc-number"
+          id="Phone" 
+          type="number" 
+          placeholder="Enter ur number">
+        </div>
+        <div>
+        <label for="birth">Date of Birth</label>
+        <input 
+          name="birth"
+          id="birth" 
+          type="date" 
+          />
+        </div>
+          <div>
+        <label for="password">password</label>
+         <input 
+           id="password" 
+           name="password"
+           type="password"
+           placeholder="Atleast 6 digits"
+           required />
+        </div>
+           <div>
+        <label for="radio"> Radio</label>
+        <input id="radio" type="radio">
+        </div>
+        <label for="country">Country</label>
+        <select name="country" id="country" multiple size="3">
+            <option value="">Select ur country</option>
+            <option value="IN">India</option>
+            <option value="CH">China</option>
+            <option value="US">America</option>
+            <option value="Uk">United Kingdom</option>
+        </select>
+        <div>
+          <button type="submit">Submit</button> 
+        </div>
+          
+    </form>
+
+    <h2>List of fruits</h2>
+    <p id="mango" data-product-id="abc1">Mango - <span>10</span></p>
+    <p>Orange - <span>5</span></p>
+    <p>Banana - <span>15</span></p>
+    <script>
+        let mango=document.getElementById("mango");
+        console.log(mango.dataset.productId);
+        mango.dataset.color="pink";
+        console.log(mango.dataset.color);
+    </script>
+</body>
+</html>

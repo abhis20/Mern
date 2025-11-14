@@ -1,0 +1,71 @@
+:root{
+    --btn-color:grey;
+    --bg-color:lightyellow;
+    --default-color:green;
+}
+*{
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+}
+h1{
+    text-align: center;
+}
+.navbar a{
+    margin: 10px 20px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: rgb(13, 83, 145);
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+.gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 50px;
+}
+.card{
+    flex: 0 0 280px;
+    box-shadow: -5px -5px 10px black;
+    border-radius: 10px;
+    padding: 10px 20px 0px;
+}
+
+/* 
+
+This is shorthand for the flex property in Flexbox:
+flex: <flex-grow> <flex-shrink> <flex-basis>;
+
+✔ flex-grow: 1
+
+The card can grow and take up extra available space.
+
+All cards with flex-grow: 1 will share leftover space equally.
+
+✔ flex-shrink: 1
+
+The card is allowed to shrink if there isn't enough space.
+
+Prevents overflow when the screen becomes smaller.
+
+✔ flex-basis: 250px
+
+The initial width of the card should be 250px.
+
+After this, grow/shrink rules decide the final width.
+
+In simple words:
+
+“The card starts at 250px wide, but can grow or shrink to fit the container evenly.”
+
+ */
+
+.card img{
+ width: 100%; /* The image inside the card should take 100% of the card’s width. */
+}

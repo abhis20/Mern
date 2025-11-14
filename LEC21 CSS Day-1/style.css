@@ -1,0 +1,78 @@
+/* Universal selector */
+*{
+    color:red;/* color applied using color name*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* we can add a font-family inside font-family property
+    and the preferences if browser failed to load some font.
+    */
+}
+
+/*
+Syntax
+selector{
+property:value
+}
+*/
+
+/*
+ element selector:tag name
+*/
+
+h2{
+   color: rgb(20, 120,50); /* color applied using rgb*/
+}
+p{
+    /* color is applied using rgba, a->alpha, which hepls setting the transparency also*/
+    color: rgba(119, 200, 20, 0.592);
+}
+
+h3{
+    /* color is applied using hex code, hwhich is #rrggbb*/
+    color: #a10b0b;;
+}
+#p1{
+    font-size: 20px;
+    font-weight: 100;
+    text-align: justify;/* left, right,center,justify*/
+    text-decoration: underline;/* line-through,underline,overline*/
+    line-height: 30px;
+}
+
+a{
+    color: black;
+    font-size: large;
+    text-decoration: none;/* none will remove the underline from anchor tag*/
+    text-transform: capitalize;/* capitalize, uppercase, lowercase*/
+}
+
+/* units in css
+px--> fixed pixels
+% percentage--> % of parent element
+em--> relative to parents font size (if parents font size is 20px then 2em will will be double of parents font size)
+rem-->relative to root's font size (size of the main html tag)
+vh/vw--> relative to viewport (screen) height/width
+*/
+
+/*  
+====Box Model
+
+margin-->border-->padding-->content
+
+same applies to margin also
+padding: 50px; --> this means all four sides(T,B,L,R) will have 50px of padding
+50px 150px --> T and B -->50px ,,, L and R-->150px
+50px 150px 100px---> Top,(left,right),Bottom
+50px 50px 150px 100px---> (cloclwise direction) t,r,b,l
+
+*/
+
+#p2{
+    background-color:yellow ;
+    padding: 50px 100px;
+    text-align: justify;
+    border:10px solid black; /* dashed, dotted, solid*/
+     margin: 50px;
+}
+button{
+    margin: 60px 10px 60px 10px;
+}

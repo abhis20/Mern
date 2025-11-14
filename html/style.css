@@ -1,0 +1,41 @@
+/* Global Styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sidebar Container */
+.sidebar {
+  border-top: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  border-bottom: 1px solid #dadada;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  margin: 1rem;
+  padding: 2rem 0;
+  width: 10rem;
+  height: 80vh;
+}
+
+/* Sidebar Heading */
+#sb-heading {
+  color: blueviolet;
+  font-size: 0.75rem; /* 12px = 0.75rem */
+  padding: 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Sidebar Items */
+.sb-item {
+  padding: 0.5rem;
+  margin-bottom: 0.25rem; /* 4px = 0.25rem */
+  cursor: pointer;
+}
+
+/* Hover Effect */
+.sb-item:hover {
+  font-weight: 600;
+  background-color: #f0f0f0;
+}
