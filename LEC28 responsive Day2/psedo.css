@@ -1,0 +1,38 @@
+*::after,*::before,*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div>div{
+    background-color: yellow;
+    width: 400px;
+    height: 200px;
+    margin: 100px auto;
+}
+div>div:first-child{
+    background-color: red;
+}
+
+.child:active{
+    background-color: black;
+}
+
+.child:hover{
+    border: 2px solid blue;
+}
+
+.elements p::before{
+    content: "Abhishek";
+}
+
+.elements p::first-letter{
+    content: "";
+    color: brown;
+}
+
+.elements p::first-line{
+    content: "";
+    color: blue;
+}
+

@@ -1,0 +1,41 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("https://img.freepik.com/free-vector/japanese-themed-zen-style-landscape-design-background_1048-21089.jpg?semt=ais_hybrid&w=740&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.plane{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: bottom 10s ease-in-out, left 10s ease-in-out;
+
+}
+
+.container:hover .plane{
+    left:100%;
+    bottom: 100%;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}

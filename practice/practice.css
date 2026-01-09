@@ -1,0 +1,35 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.container{
+    width:100vw;
+    height: 100vh;
+    background-color: aquamarine;
+    border:10px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.ball{
+    height: 100px;
+    width:100px;
+    background-color: brown;
+    border-radius: 50%;
+    animation: bounce 10s cubic-bezier(0.075, 0.82, 0.165, 1) infinite alternate;
+}
+
+@keyframes bounce {
+
+    0%{
+        transform: translate(0,0) scale(1.2,0.8);
+    }
+
+    100%{
+        transform: translateY(-80vh) scale(1,1);
+    }
+    
+}

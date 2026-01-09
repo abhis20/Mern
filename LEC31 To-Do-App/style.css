@@ -1,0 +1,59 @@
+*,*::after,*::before{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(120deg,lightyellow,rgba(144, 238, 144, 0.825),rgba(255, 255, 0, 0.638));
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.input-box{
+   width: 30%;
+   display: flex;
+   justify-content: space-around;
+}
+
+input{
+    height: 30px;
+    padding: 5px 5px;
+}
+
+.add{
+    height: 30px;
+    width:20% ;
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 15%;
+    cursor: pointer;
+}
+
+.add:hover{
+   transform: scale(1.1);
+}
+
+.todo{
+  font-size: large;
+  font-weight: bolder;
+  color:black;
+}
+
+.active{
+    padding:3px 3px;
+    margin-left: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 15%;
+}

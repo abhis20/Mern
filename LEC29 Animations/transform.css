@@ -1,0 +1,77 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 40px;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(48, 176, 176);
+    margin: 40px;
+    text-align: center;
+    padding: 10px;
+    border: solid black;
+    border-width: 2px 5px;
+}
+body{
+    background-color: rgb(210, 218, 218);
+    height: 100vh;
+}
+/* Hover Effect */
+ .one:hover {
+    transform: scale(1.2);
+}
+ .two:hover {
+    transform: scale(0.4,1.2);/* 0.4 --> decreases 0.4 times 
+     0.4 ---> x axis , 1.2 ---> y axis
+
+     also we can use scaleX() and scaleY()
+    */
+}
+
+
+ .three:hover {
+    transform: rotate(45deg);/* will rotate clockwise by 45degree*/
+    transform: rotate(-45deg);/* anticlockwise*/
+}
+
+ .four:hover {
+    transform: rotate(0.5turn);/* 1 turn =360deg and rest behaviour is same */
+}
+
+ .five:hover {
+    transform: skew(30deg);
+}
+
+ .six:hover {
+    transform: skew(30deg,30deg); /* skews in both (x,y) direction*/
+}
+
+ .seven:hover {
+    transform: translate(100%);/* we can also use pixel to move*/
+    transform: translate(-50px,100px);
+
+    /*
+     
+    x --> -ve --> left
+    x --> +ve --> right
+    y --> +ve --> bottom
+    y --> -ve --> up
+
+
+    */
+}
+
+/* NOTE: We can combine all transforms attributes */
+
+.eight:hover{
+    transform: rotate(90deg) translate(100px);
+}
+.nine:hover{
+    transform: translate(100px) rotate(90deg) skew(40deg);
+}

@@ -1,0 +1,37 @@
+body{
+  font-family: sans-serif;
+  margin: 40px;
+  background:#f2dfdf ;
+}
+
+.heading{
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 28px;
+}
+
+/* Rotating List  */
+
+.rotating-box{
+  width: 300px;
+  height: 40px;
+  background:#fff;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-left: 10px;
+  border-left: 5px solid #3498ad;
+}
+
+.text{
+  margin: 0;
+  padding: 8px  0;
+  font-size: 20px;
+  animation: rotatelist 8s infinite;
+}
+
+@keyframes rotatelist {
+  0% , 20% {transform: translateY(0);}  /*show item 1*/
+  25% ,45% {transform: translateY(-40px);}  /*show item 2*/
+  50% , 70% {transform: translateY(-80px);} /*show item 3*/
+  75% , 95% {transform: translateY(-120PX);} /*show item 4*/
+} 

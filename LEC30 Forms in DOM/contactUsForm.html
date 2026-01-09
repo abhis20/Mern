@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contactUsForm.css">
+</head>
+<body>
+     <div class="container">
+        <h1>Contact us</h1>
+
+        <form class="contact-us">
+            <div class="name">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Full Name" />
+            </div>
+
+            <div class="mobile">
+                <label for="mobile">Mobile No</label>
+                <input type="text" id="mobile" placeholder="91+" />
+            </div>
+
+            <div class="gender">
+                <label>Gender</label>
+
+                <label for="male">
+                <input name="gender" type="radio" id="male" />
+                Male</label>
+
+                <label for="female">
+                <input name="gender" type="radio" id="female" />
+                Female</label>
+            </div>
+
+            <div class="consent">
+                <label for="consent">Agree to Tnc</label>
+                <input type="checkbox" id="consent" />
+            </div>
+
+            <div class="city">
+                <select id="city">
+                    <option value="">Select city</option>
+                    <option>Pune</option>
+                    <option>Mumbai</option>
+                    <option>Nashik</option>
+                    <option>Lucknow</option>
+                </select>
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+    <script src="contactUsForm.js"></script>
+</body>
+</html>

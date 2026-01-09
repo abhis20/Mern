@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    margin-right: 10px;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (min-width:640px){
+     .container{
+        flex-direction: row;
+     }
+}
+
+@media (max-width:640px){
+     .container{
+        flex-direction: column;
+     }
+}

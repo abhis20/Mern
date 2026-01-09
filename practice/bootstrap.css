@@ -1,0 +1,19 @@
+button{
+    margin-top: 20px;
+}
+h1{
+    text-align: center;
+}
+
+#image{
+    padding: 10px 10px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-end;
+    text-align: center;
+    margin:0 auto;
+}

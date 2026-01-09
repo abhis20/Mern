@@ -1,0 +1,58 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("https://img.freepik.com/free-vector/japanese-themed-zen-style-landscape-design-background_1048-21089.jpg?semt=ais_hybrid&w=740&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.container{
+    height: 100%;
+    width: 100vw;
+    position: relative;
+}
+
+.plane{
+    width:100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    border: solid black;
+    border-radius: 50%;
+    animation-name: start;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes start {
+    0% {
+    transform: translate(0, 0) rotate(0deg) scale(1.5);
+  }
+
+  /* Stage 2 — Mid-flight (higher + tilted + slightly smaller) */
+  50% {
+    transform: translate(40vw, -40vh) rotate(25deg) scale(0.85);
+  }
+
+  /* Stage 3 — End (top-right + more tilt + smallest size) */
+  100% {
+    transform: translate(80vw, -80vh) rotate(35deg) scale(0.5);
+  }
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+

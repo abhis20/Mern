@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-top: 200px;
+            margin-left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="great-grand-parent">
+        <div class="grandparent">
+        <div class="parent">
+            <div class="child">Child</div>
+        </div>
+       </div>
+       <div class="parent"></div>
+    </div>
+
+    <div class="parent2">
+        <div class="child1"></div>
+        <div class="child2"></div>
+        <div class="child3"></div>
+        <div class="child4"></div>
+        <div class="child5"></div>
+        <div class="child6"></div>
+    </div>
+       
+    <div class="card">
+        <div class="title">Shoes</div>
+        <div class="buttons">
+            <button class="delete">Delete</button>
+            <button class="edit">Edit</button>
+        </div>
+    </div> 
+
+      <script>
+
+        // Math.random() genarate opt 6digits no starting from 0
+
+        console.log(Math.floor(Math.random()*(900000-100000+1)+100000));
+
+
+
+         /*
+         
+         we can get the parent element of any tag by parentElement method
+         
+         */
+
+         const child=document.querySelector(".child");
+        //  console.log(child.parentElement);
+         // parent --> grandparent
+         // grandparent--> body
+         // body--> html
+         // html --> root
+            
+        //  console.log(child.closest(".parent"));   gives the closest selector selected
+
+         // finding the parent of .child whose parent is body and name its class='accio'
+        // let a=child;
+        // while(a.parentElement!=document.body){
+        //      a=a.parentElement;
+        // }
+        // a.classList.add("accio");
+
+        const parent2=document.querySelector(".parent2");
+        console.log(parent2.childNodes); // includes uncessary texts
+        console.log(parent2.children);  // always prefer this, gives the elements
+
+        console.log(parent2.firstElementChild);
+         console.log(parent2.lastElementChild);
+
+         console.log(parent2.children[1]);
+
+         // add class accio to fisrt child of body
+
+         let bodyFirstChild=document.body.firstElementChild;
+         bodyFirstChild.classList.add("accio");
+         console.log(bodyFirstChild);
+        
+         // Iterating 
+         for(let child of parent2.children){
+            console.log(child.className);
+         }
+
+        //  siblings
+
+        let child2=document.querySelector(".child2");
+        console.log(child2.nextElementSibling);  // getting next sibling
+        console.log(child2.previousElementSibling); // getting previous sibling
+
+        // printing all siblings of child2
+
+         let parentOfChild2=child2.parentElement;
+         let siblingsChild2=parentOfChild2.children;
+        //  for(let sibling of siblingsChild2){
+        //     if(sibling!=child2)
+        //     console.log(sibling);
+        //  }
+
+        console.log(
+            [...siblingsChild2].filter((sibling)=>sibling!=child2)
+        )
+
+         const deletebtn=document.querySelector(".delete");
+         deletebtn.addEventListener('click',(e)=>{
+               e.preventDefault();
+               deletebtn.closest(".card").remove();
+         })
+
+      </script>
+</body>
+</html>

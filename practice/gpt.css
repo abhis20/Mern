@@ -1,0 +1,109 @@
+
+body{
+    background-color: rgba(0, 0, 0, 0.764);
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-areas: 
+    "a b"
+    ;
+    color: white;
+}
+
+.sidebar{
+    grid-area: a;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 30px;
+    font-size: larger;
+    border-right: 1px solid white;
+    padding-left: 10px;
+}
+
+.sidebar .menu{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    font-weight: bold;
+}
+.sidebar .menu a{
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid white;
+    width: 100%;
+    cursor: pointer;
+}
+.main{
+    grid-area: b;
+     display: grid;
+     grid-template-rows: 1fr 8fr;
+     grid-template-areas: "c"
+     "d";
+}
+
+.topbar{
+    grid-area: c;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: flex-start;
+    font-size: larger;
+    font-weight: bolder;
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-left: 10px;
+}
+
+.center-content{
+    grid-area: d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 40px;
+    right: 30px;  
+    width: 100%;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    width: 40%;
+    height: 30px;
+    background-color: white;
+    cursor: pointer;
+}
+#i1 {
+  border: none;
+}
+
+.mic{
+  margin-left: auto; /* pushes last item to the right */
+
+}
+.sidebar a:hover{
+    background-color: grey;
+}
+.login{
+    cursor: pointer;
+}
+.signup{
+    cursor: pointer;
+}
+.top-left{
+    cursor: pointer;
+}
