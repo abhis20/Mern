@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Cards Gallery</title>
+
+    <style>
+        body {
+            background: #f1f1f1;
+            font-family: Arial, sans-serif;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            padding: 40px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            padding: 24px 12px;
+            transition: box-shadow 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .title {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .price {
+            color: #888;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .card button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .card button:hover {
+            background-color: #0056b3;
+        }
+
+        .top-btn {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .top-btn button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .top-btn button:hover {
+            background: #1e7e34;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-btn">
+        <button onclick="showProducts()">Show all products</button>
+    </div>
+
+    <div class="gallery" id="gallery">
+        <!-- Cards will be added using JavaScript -->
+    </div>
+
+    <script>
+        const products = [
+            { title: "Product 1", price: 30 },
+            { title: "Product 2", price: 20 },
+            { title: "Product 3", price: 30 },
+            { title: "Product 4", price: 40 },
+            { title: "Product 5", price: 50 }
+        ];
+
+        const gallery=document.querySelector("#gallery");
+        gallery.innerHTML="";
+
+        function showProducts(){
+            products.forEach(element => {
+                let card=document.createElement("div");   
+                card.className="card";
+                card.innerHTML=`
+            <div> 
+                <p class="title">${element.title}</p>
+                <p class="price">${element.price}</p>
+                <button>Add to Cart</button>
+            </div>
+            `     
+             gallery.appendChild(card);
+        });
+        }
+
+
+    </script>
+
+</body>
+</html>

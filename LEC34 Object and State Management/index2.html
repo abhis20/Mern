@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        body{
+            margin:200px;
+            height: 100vh;
+            width: 100vw;
+        } 
+    </style>
+</head>
+<body>
+    <h1>Counter</h1>
+    <div class="container">
+        <span id="level">Level: 0</span>
+        <p>0</p>
+        <button id="increase">Increase</button>
+        <button id="decrease">Decrease</button>
+    </div>
+    <hr>
+    <br>
+    <br>
+    <span>Select ur Theme</span>
+     <button id="dark">Dark</button>
+     <button id="light">Light</button>
+     <button id="add-count">Add Count</button>
+    <script>
+        
+        /*
+        Object notation groups related data and behavior together, 
+        making code more organized, reusable, scalable, and easier to maintain.
+        */
+        const counter={
+            count:0,
+            level:0,
+
+            element:{
+                showCount:document.querySelector("p"),
+                increaseBtn:document.querySelector("#increase"),
+                decreaseBtn:document.querySelector("#decrease"),
+                showLevel:document.querySelector("#level"),
+                darkBtn:document.querySelector("#dark"),
+                lightBtn:document.querySelector("#light"),
+            },
+
+            updateLevel(count){
+                if(count>10){
+                    this.level=3;
+                }else if(count>5){
+                    this.level=2;
+                }else if(count>0){
+                    this.level=1;
+                }else{
+                    this.level=0;
+                }
+                this.element.showLevel.textContent="Level: "+this.level
+            },
+
+
+            updateshowCount (Newcount){
+                this.element.showCount.textContent=Newcount;
+                this.updateLevel(Newcount);
+            },
+
+            events(){
+                this.element.increaseBtn.addEventListener('click',(e)=>{
+                    e.preventDefault();
+                    this.count++;
+                    this.updateshowCount(this.count);
+                })
+
+                this.element.decreaseBtn.addEventListener('click',(e)=>{
+                    e.preventDefault();
+                    this.count--;
+                    this.updateshowCount(this.count);
+                })
+
+                this.element.darkBtn.addEventListener('click',()=>{
+                    document.body.style.background="black";
+                    document.body.style.color="white";
+                })
+
+                this.element.lightBtn.addEventListener('click',()=>{
+                    document.body.style.background="white";
+                    document.body.style.color="black";
+                })
+            }
+        }
+
+        
+        counter.events();
+        
+        //   Important
+        /*  ✔ (this) keyword is dynamic
+            ✔ Event listeners change this
+            ✔ Arrow functions preserve context
+            ✔ Wrapping method calls is safest
+*/
+        const obj = {
+        count: 0,
+        addCount() {
+            this.count++;
+            console.log(this.count);
+        }
+    };
+
+    // calling the addCount method -> this is referring to obj
+    obj.addCount();
+
+    const addBtn = document.querySelector("#add-count");
+
+    // passing the reference of addCount method instead of calling
+    // here "this" refers to addBtn (button), NOT obj
+    addBtn.addEventListener("click", obj.addCount);
+
+    // correct way: wrap it inside another function
+    addBtn.addEventListener("click", () => {
+        obj.addCount();
+    });
+    // when function is called like this -> this refers to obj, not addBtn
+
+        // let countDisplay=document.querySelector("p");
+        // let increaseBtn=document.querySelector("#increase");
+        // let decrease=document.querySelector("#decrease");
+        // let count=0;
+        // increaseBtn.addEventListener('click',(e)=>{
+        //     e.preventDefault();
+        //     count++;
+        //     countDisplay.textContent=count;
+        // })
+
+        // decrease.addEventListener('click',(e)=>{
+        //     e.preventDefault();
+        //     count--;
+        //     countDisplay.textContent=count;
+        // })
+
+
+    </script>
+</body>
+</html>

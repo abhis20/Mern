@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level Blocks - Object Based</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 40px auto;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .box {
+            width: 300px;
+            height: 180px;
+            border: 2px solid #00ff6a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: #00ff6a;
+            margin-right: 40px;
+        }
+
+        .controls p {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .controls button {
+            display: block;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            margin: 6px 0;
+            cursor: pointer;
+        }
+
+        .controls button:hover {
+            color: #00ff6a;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="row">
+        <div class="box">1</div>
+        <div class="controls">
+            <p class="level">Level: 0</p>
+            <button class="increase">Increase Level</button>
+            <button class="decrease">Decrease Level</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="box">2</div>
+        <div class="controls">
+            <p class="level">Level: 0</p>
+            <button class="increase">Increase Level</button>
+            <button class="decrease">Decrease Level</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="box">3</div>
+        <div class="controls">
+            <p class="level">Level: 0</p>
+            <button class="increase">Increase Level</button>
+            <button class="decrease">Decrease Level</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+        function createObject(row){
+            return {
+                level:0,
+                elements:{
+                    rowElement:row,
+                    showLevel:row.querySelector(".level"),
+                    increaseBtn:row.querySelector(".increase"),
+                    decreaseBtn:row.querySelector(".decrease")
+                },
+
+                updateLevel(level){
+                    this.elements.showLevel.textContent=`Level: ${level}`
+                },
+
+                increaseLevel(){
+                    this.level++;
+                    this.updateLevel(this.level);
+                },
+
+                decreaseLevel(){
+                    this.level--;
+                    this.updateLevel(this.level);
+                },
+
+                event(){
+                    this.elements.increaseBtn.addEventListener("click",()=>{
+                        this.increaseLevel();
+                    })
+
+                    this.elements.decreaseBtn.addEventListener("click",()=>{
+                        this.decreaseLevel();
+                    })
+                }
+            }
+        }
+
+        const rows=document.querySelectorAll(".row");
+        rows.forEach(row => {
+            let block=createObject(row);
+            block.event();
+        });
+
+</script>
+
+</body>
+</html>

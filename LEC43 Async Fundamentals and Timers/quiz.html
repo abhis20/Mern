@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Math Quiz With Timer</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#4e73df,#1cc88a);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.quiz-container, .result-container{
+    background:white;
+    padding:30px;
+    width:350px;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+.result-container{
+    display:none;
+}
+
+.question{
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.timer{
+    font-size:18px;
+    font-weight:bold;
+    color:red;
+    margin-bottom:10px;
+}
+
+input{
+    width:80%;
+    padding:10px;
+    font-size:16px;
+    margin-bottom:15px;
+    border-radius:5px;
+    border:1px solid #ccc;
+    text-align:center;
+}
+
+button{
+    padding:10px 20px;
+    font-size:16px;
+    border:none;
+    border-radius:5px;
+    background:#4e73df;
+    color:white;
+    cursor:pointer;
+    margin:5px;
+}
+
+button:hover{
+    background:#2e59d9;
+}
+
+.score{
+    margin-top:10px;
+    font-size:18px;
+    font-weight:bold;
+    color:#1cc88a;
+}
+</style>
+</head>
+
+<body>
+
+<div class="quiz-container">
+    <h2>Math Quiz ⏳</h2>
+    <div class="timer">Time: 60</div>
+    <div class="question"></div>
+    <input disabled type="number" placeholder="Enter answer">
+    <br>
+    <button class="start">Start Quiz</button>
+    <button class="submit">Submit</button>
+    <div class="score">Score: 0</div>
+</div>
+
+<div class="result-container">
+    <h2>Quiz Completed 🎉</h2>
+    <div class="finalScore"></div>
+</div>
+    <script src="quiz.js"></script>
+</body>
+</html>

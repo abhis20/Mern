@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            gap: 50px;
+        }
+        textarea{
+            width: 50%;
+            height: 150px;
+        }
+        .timer{
+            display: flex;
+            justify-content: space-evenly;
+            width: 50%;
+        }
+        button{
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <textarea disabled id="defaultText">Learning new skills takes time and patience. Every small step you take helps you grow and improve. Mistakes are part of the journey and teach valuable lessons. Stay consistent, practice regularly, and believe in yourself. With effort and dedication, you can achieve your goals and build a successful future.
+    </textarea>
+
+    <textarea disabled id="userText"></textarea>
+
+    <h1>0</h1>
+    <div class="timer">
+        <button>Start</button>
+        <button>Reset</button>
+    </div>
+    
+
+
+    <script src="handsonTypimngCheck.js"></script>
+</body>
+</html>
